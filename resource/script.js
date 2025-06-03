@@ -41,6 +41,16 @@
         document.querySelector('.slide-nav.right').addEventListener('click', nextSlide);
     });
 
+    // Hàm chọn btn stars-item sẽ đổi màu
+    const buttons = document.querySelectorAll('.stars-item');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Xoá class active ở tất cả button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        });
+    });
+
     // Hàm delete quảng cáo
         document.querySelector('.floating-qr .close-btn').addEventListener('click', function() {
         document.querySelector('.floating-qr').style.display = 'none';
