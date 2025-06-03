@@ -80,7 +80,7 @@
         <div class="slide-wrapper">
             <!-- Banner slide -->
             <div class="slide-banner">
-                <img src="resource/img/Slide1.png" alt="slide">
+                <img id="slideImage" src="resource/img/Slide1.png" alt="slide">
             </div>
 
             <!-- Nút điều hướng trái/phải -->
@@ -268,19 +268,6 @@
             </div>
         </div>
     </section>
-
-    <script>
-        function switchTab(tab) {
-            const tabButtons = document.querySelectorAll('.tab');
-            const contents = document.querySelectorAll('.tab-content');
-
-            tabButtons.forEach(btn => btn.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-
-            document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add('active');
-            document.getElementById(tab).classList.add('active');
-        }
-    </script>
 
     <!-- Ưu đãi mới nhất -->
     <section class="container uudai">
@@ -635,9 +622,7 @@
         </div>
     </footer>
 
-
-
-
+    <script src="resource/script.js"></script>
 
 </body>
 
