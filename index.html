@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang chủ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="resource/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="bg-white shadow-sm head">
+        <div class="container d-flex justify-content-between align-items-center py-3">
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="toggle" class="fas fa-bars toggle-icon"></label>
+            <div class="d-flex align-items-center">
+                <a href="#"><img src="resource/img/Logo.png" alt="logo"></a>
+            </div>
+            <div class="menu-wrapper">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-plane-up"></i>
+                            Vé máy bay
+                            <div class="underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-couch"></i>
+                            Khách sạn
+                            <div class="underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-ticket-simple"></i>
+                            Combo ưu đãi
+                            <div class="underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-ticket"></i>
+                            Vé vui chơi
+                            <div class="underline"></div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-file"></i>
+                            Tin tức
+                            <div class="underline"></div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="contact">
+                    <span class="text-contact fw-semibold">
+                        <i class="fa-solid fa-phone" style="color: black"></i> 1900 - 2323 - 85
+                    </span>
+                    <div class="login">
+                        <i class="fas fa-basketball" style="color: black"></i>
+                        <button class="btn btn-warning text-white btn-login">Đăng nhập</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Banner -->
+
+    <section class="container my-4">
+        <div class="slide-wrapper">
+            <!-- Banner slide -->
+            <div class="slide-banner">
+                <img src="resource/img/Slide1.png" alt="slide">
+            </div>
+
+            <!-- Nút điều hướng trái/phải -->
+            <div class="slide-nav left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+            <div class="slide-nav right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search form -->
+    <section class="container mt-4 search-form">
+
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab('flight')"><i class="fa-solid fa-plane-up text-warning"></i> Vé
+                máy
+                bay</div>
+            <div class="tab" onclick="switchTab('hotel')"><i class="fa-solid fa-couch text-primary"></i> Khách sạn</div>
+        </div>
+
+        <div class="tab-container">
+            <!-- Tab: Vé máy bay -->
+            <div id="flight" class="tab-content active">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div>
+                            <label>Điểm đi</label>
+                            <input type="text" value="Hà Nội (HAN)">
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="mb-4">
+                            <label>Ngày đi</label>
+                            <input type="date" value="2020-10-15">
+                        </div>
+                    </div>
+
+                    <div class="col-md-1">
+                        <div class="row">
+                            <label>
+                                <input type="checkbox" checked>
+                            </label>
+                        </div>
+                        <div class="row" style="margin-left: 10px;">
+                            Khứ hồi
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div>
+                            <label>Hạng ghế</label>
+                            <select>
+                                <option>Phổ thông tiết kiệm</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <div>
+                                    <label>Điểm đến</label>
+                                    <input type="text" value="Hồ Chí Minh (SGN)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <div class="mb-4">
+                                <label>Ngày về</label>
+                                <input type="date" value="2020-10-30">
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <div class="d-flex mb-3" style="justify-content: space-around;">
+                                <div style="margin-top: 2px; width: 105px; margin-right: 25px;">
+                                    <label><span><i class="fa-solid fa-person"></i></span> Người lớn</label>
+
+                                    <select>
+                                        <option>02</option>
+                                    </select>
+                                </div>
+                                <div style="margin-top: 2px; width: 105px; margin-right: 25px;">
+                                    <label><span><i class="fa-solid fa-person"></i> Trẻ em</span>
+                                    </label>
+                                    <select>
+                                        <option>01</option>
+                                    </select>
+                                </div>
+                                <div style="margin-top: 2px; width: 105px; margin-right: 25px;">
+                                    <label><span><i class="fa-solid fa-baby"></i> Em bé</span></label>
+                                    <select>
+                                        <option>00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="search-btn" style="margin-top: 25px;">Tìm chuyến bay</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Tab: Khách sạn -->
+            <div id="hotel" class="tab-content">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div>
+                            <label>Điểm đến / Tên khách sạn</label>
+                            <input type="text" value="Đảo Phú Quốc">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                            <label>Ngày nhận phòng</label>
+                            <input type="date" value="2020-10-15">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                            <label>Ngày trả phòng</label>
+                            <input type="date" value="2020-10-30">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="d-flex mb-3" style="justify-content: space-around;">
+                            <div style="margin-top: 2px; width: 105px; margin-right: 25px;">
+                                <label><span><i class="fa-solid fa-person"></i></span> Người lớn</label>
+
+                                <select>
+                                    <option>02</option>
+                                </select>
+                            </div>
+                            <div style="margin-top: 2px; width: 105px; margin-right: 25px;">
+                                <label><span><i class="fa-solid fa-person"></i> Trẻ em</span>
+                                </label>
+                                <select>
+                                    <option>01</option>
+                                </select>
+                            </div>
+                            <div style="margin-top: 2px; width: 105px; margin-right: 25px;">
+                                <label><span><i class="fa-solid fa-baby"></i> Em bé</span></label>
+                                <select>
+                                    <option>00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div>
+                            <strong>Hạng sao:</strong>
+                            <div class="stars">
+                                <button class="stars-item">1 ⭐</button>
+                                <button class="stars-item">2 ⭐</button>
+                                <button class="stars-item">3 ⭐</button>
+                                <button class="stars-item">4 ⭐</button>
+                                <button class="stars-item">5 ⭐</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="price-range">
+                            <label><strong>Khoảng giá:</strong></label>
+                            <input type="range" min="0" max="10000000" value="5000000">
+                            <div class="price-labels">
+                                <span>0 VND</span>
+                                <span>10.000.000 VND</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function switchTab(tab) {
+            const tabButtons = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+
+            document.querySelector(`.tab[onclick="switchTab('${tab}')"]`).classList.add('active');
+            document.getElementById(tab).classList.add('active');
+        }
+    </script>
+
+    <!-- Ưu đãi mới nhất -->
+    <section class="container uudai">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="section-title">Ưu đãi mới nhất</div>
+            <a href="#" class="deal-link">Xem thêm →</a>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="uudai-card">
+                    <a><img src="resource/img/item_Uudai.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="uudai-card">
+                    <a><img src="resource/img/item_Uudai1.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="uudai-card">
+                    <a><img src="resource/img/item_Uudai2.png" alt=""></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Vé máy bay tốt nhất -->
+    <section class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="section-title">Vé máy bay giá tốt</div>
+            <a href="#" class="deal-link">Xem thêm →</a>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <a href="#"><img src="resource/img/ve.jpg" alt="" style="width: 100%;"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="#"><img src="resource/img/ve.jpg" alt="" style="width: 100%;"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="#"><img src="resource/img/ve.jpg" alt="" style="width: 100%;"></a>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <a href="#"><img src="resource/img/ve.jpg" alt="" style="width: 100%;"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="#"><img src="resource/img/ve.jpg" alt="" style="width: 100%;"></a>
+            </div>
+            <div class="col-md-4">
+                <a href="#"><img src="resource/img/ve.jpg" alt="" style="width: 100%;"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combo siêu tiết kiệm -->
+    <section class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="section-title">Combo siêu tiết kiệm</div>
+            <a href="#" class="deal-link">Xem thêm →</a>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="combo-card">
+                    <div class="combo-img">
+                        <img src="resource/img/combo1.png" class="w-100">
+                        <div class="discount-badge">-40%</div>
+                        <div class="combo-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="combo-body">
+                        <p class="combo-title mb-1">Combo 3 ngày 2 đêm Hà Nội - Phú Quốc</p>
+                        <div class="combo-info mb-2">
+                            <div class="combo-title">
+                                <div>
+                                    <span><i class="fa-regular fa-clock"></i> 3 ngày 2 đêm</span>
+                                </div>
+                                <span>Số lượng: 25</span>
+                            </div>
+                            <div class="combo-title">
+                                <div>
+                                    <span><i class="fa-regular fa-hourglass-half"></i> 2 ngày 3h:30m:25s
+                                    </span>
+                                </div>
+                                <span>Đã mua: 03</span>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="mb-2 price">
+                            <div>
+                                <span class="original-price">3.863.000 VND</span><br>
+                                <span>Từ</span><span class="combo-price"> 2.400.000 VND</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-order">Đặt ngay</button>
+                            </div>
+
+                        </div>
+                        <div class="price-info">
+                            <div class="small-note mt-1">Đã bao gồm thuế & phí</div>
+                            <span class="book-later">Đặt trước 7 ngày</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="combo-card">
+                    <div class="combo-img">
+                        <img src="resource/img/combo2.png" class="w-100">
+                        <div class="discount-badge">-40%</div>
+                        <div class="combo-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="combo-body">
+                        <p class="combo-title mb-1">Combo 3 ngày 2 đêm Hà Nội - Phú Quốc</p>
+                        <div class="combo-info mb-2">
+                            <div class="combo-title">
+                                <div>
+                                    <span><i class="fa-regular fa-clock"></i> 3 ngày 2 đêm</span>
+                                </div>
+                                <span>Số lượng: 25</span>
+                            </div>
+                            <div class="combo-title">
+                                <div>
+                                    <span><i class="fa-regular fa-hourglass-half"></i> 2 ngày 3h:30m:25s
+                                    </span>
+                                </div>
+                                <span>Đã mua: 03</span>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="mb-2 price">
+                            <div>
+                                <span class="original-price">3.863.000 VND</span><br>
+                                <span>Từ</span><span class="combo-price"> 2.400.000 VND</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-order">Đặt ngay</button>
+                            </div>
+
+                        </div>
+                        <div class="price-info">
+                            <div class="small-note mt-1">Đã bao gồm thuế & phí</div>
+                            <span class="book-later">Đặt trước 7 ngày</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="combo-card">
+                    <div class="combo-img">
+                        <img src="resource/img/combo3.png" class="w-100">
+                        <div class="discount-badge">-40%</div>
+                        <div class="combo-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="combo-body">
+                        <p class="combo-title mb-1">Combo 3 ngày 2 đêm Hà Nội - Phú Quốc</p>
+                        <div class="combo-info mb-2">
+                            <div class="combo-title">
+                                <div>
+                                    <span><i class="fa-regular fa-clock"></i> 3 ngày 2 đêm</span>
+                                </div>
+                                <span>Số lượng: 25</span>
+                            </div>
+                            <div class="combo-title">
+                                <div>
+                                    <span><i class="fa-regular fa-hourglass-half"></i> 2 ngày 3h:30m:25s
+                                    </span>
+                                </div>
+                                <span>Đã mua: 03</span>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="mb-2 price">
+                            <div>
+                                <span class="original-price">3.863.000 VND</span><br>
+                                <span>Từ</span><span class="combo-price"> 2.400.000 VND</span>
+                            </div>
+                            <div>
+                                <button class="btn btn-order">Đặt ngay</button>
+                            </div>
+
+                        </div>
+                        <div class="price-info">
+                            <div class="small-note mt-1">Đã bao gồm thuế & phí</div>
+                            <span class="book-later">Đặt trước 7 ngày</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Điểm đến phổ biến -->
+    <section class="container">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="section-title">Điểm đến phổ biến</div>
+        </div>
+        <div class="place">
+            <div>
+                <a href="#"><img src="resource/img/Thẻ điểm đến.png" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="resource/img/Thẻ điểm đến1.png" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="resource/img/Thẻ điểm đến2.png" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="resource/img/Thẻ điểm đến3.png" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="resource/img/Thẻ điểm đến2.png" alt=""></a>
+            </div>
+            <div>
+                <a href="#"><img src="resource/img/Thẻ điểm đến3.png" alt=""></a>
+            </div>
+    </section>
+
+    <!-- Tải app -->
+    <section class="container dowload-app">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+            </div>
+            <img src="resource/img/Group 353.png" alt="app" class="img-fluid">
+        </div>
+    </section>
+
+    <div class="floating-qr">
+        <img src="resource/img/Frame 159.png" alt="Travel Link Logo" class="logo" style="width: 80%;" />
+    </div>
+
+    <!-- Footer -->
+
+    <footer class="bg-light border-top mt-5">
+        <div class="container py-5">
+            <!-- Icon hàng trên -->
+            <div class="row text-center mb-4 footer-1">
+                <div class="col-md-4 mb-3">
+                    <img src="resource/img/Frame 20.png" alt="">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="resource/img/Frame 21.png" alt="">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="resource/img/Frame 22.png" alt="">
+                </div>
+            </div>
+
+            <!-- Link hàng dưới -->
+            <div class="row text-start">
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold">Về Travel Link</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Điều khoản dịch vụ</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold">Dịch vụ liên kết</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#">Travel Go - Đặt xe sân bay</a></li>
+                        <li><a href="#">Travel Hotel - Đặt phòng khách sạn</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h6 class="fw-bold">Hướng dẫn & Chính sách</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                        <li><a href="#">Chính sách hoàn hủy vé</a></li>
+                        <li><a href="#">Hướng dẫn dịch vụ</a></li>
+                        <li><a href="#">Hướng dẫn đặt vé & thanh toán</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="mb-2">
+                        <select id="languageSelect" class="form-select form-select-sm">
+                            <option selected> Tiếng Việt - VND</option>
+                            <option> English - USD</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="subscribe" class="form-label fw-bold">Đăng ký nhận thông tin và ưu đãi</label>
+                        <div class="input-group input-group-sm">
+                            <input type="email" id="subscribe" class="form-control" placeholder="Email của bạn">
+                            <button class="btn btn-primary" type="button">➤</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Company info -->
+            <div class="row mt-4 small text-secondary">
+                <div class="col-md-9">
+                    <h6 class="text-primary fw-bold">Tổng công ty Viễn thông MobiFone</h6>
+                    <p>
+                        A: Tòa nhà MobiFone, lô VP1, P. Yên Hoà, Q. Cầu Giấy, Hà Nội<br>
+                        E: cskh@travellink.vn<br>
+                        T: (+84-24)37831800
+                    </p>
+                </div>
+
+                <div class="col-md-3">
+                    <h6 class="fw-bold">Tải App tại</h6>
+                    <div class="d-flex gap-2">
+                        <a href="#"><img
+                                src="https://i-invdn-com.investing.com/landingPages/mobile_2018/vn/vn-badge-ios.png"
+                                alt="App Store" width="120"></a>
+                        <a href="#"><img
+                                src="https://families.google/familylink/static/img/google-play/googleplay.vi_ALL.png?cache=ec4fefa"
+                                alt="Google Play" width="120"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="bg-primary text-white text-center py-2">
+            <small>Copyright © 2021 Travel Link</small><br>
+            <a href="#" class="text-white text-decoration-none me-2">Facebook</a>
+            <a href="#" class="text-white text-decoration-none me-2">Instagram</a>
+            <a href="#" class="text-white text-decoration-none">Youtube</a>
+        </div>
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
