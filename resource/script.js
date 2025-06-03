@@ -40,3 +40,8 @@
         document.querySelector('.slide-nav.left').addEventListener('click', prevSlide);
         document.querySelector('.slide-nav.right').addEventListener('click', nextSlide);
     });
+
+    // Hàm delete quảng cáo
+        document.querySelector('.floating-qr .close-btn').addEventListener('click', function() {
+        document.querySelector('.floating-qr').style.display = 'none';
+    });
