@@ -10,6 +10,10 @@ input[type="text"], input[type="date"], select {
     border-color: #e8eaed;
 }
 
+label {
+  color: #99a3ae;
+}
+
 select {
   padding: 11px!important;
 }
@@ -149,7 +153,11 @@ select {
     margin-top: 14rem;
   }
 
-    .uudai-card, .flight-card, .combo-card, .news-card {
+  .uudai, .giave, .combo, .place_phobien, .footer-title, .tintuc {
+    width: 80%;
+  }
+
+    .uudai-card, .flight-card, .combo-card, .news-card, .tintuc-card {
         border: 1px solid #eee;
         border-radius: 8px;
         margin-bottom: 1rem;
@@ -162,7 +170,7 @@ select {
     }
 
     .uudai-card img:hover {
-      transform: scale(1.02);
+      transform: scale(1.1);
     }
 
     .deal-link {
@@ -200,7 +208,7 @@ select {
               transition: background-color 0.3s ease, color 0.3s ease;
               margin-right: 5px;
               background-color: white;
-              margin-right: 15px;
+              margin-right: 25px;
           }
 
           .tab:last-child {
@@ -209,7 +217,7 @@ select {
 
           .tab.active {
               border-bottom: none;
-              transform: scale(1.1);
+              transform: scale(1.2);
               color: black;
               
           }
@@ -297,23 +305,25 @@ select {
     }
 
     /* Combo */
-    .combo-card {
+    .combo-card, .tintuc-card {
       border: 1px solid #e0e0e0;
       border-radius: 10px;
       overflow: hidden;
       transition: box-shadow 0.3s;
+      transition: transform 0.3s ease;
     }
 
-    .combo-title {
+    .combo-title, .tintuc-title {
       display: flex;
       justify-content: space-between;
     }
 
-    .combo-card:hover {
+    .combo-card:hover, .tintuc-card:hover {
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transform: scale(1.1);
     }
 
-    .combo-img {
+    .combo-img, .tintuc-img {
       position: relative;
     }
     .discount-badge {
@@ -346,7 +356,7 @@ select {
       padding: 16px;
     }
     .combo-title {
-      font-size: 16px;
+      font-size: 15px;
     }
     .combo-info {
       font-size: 14px;
@@ -400,7 +410,7 @@ select {
     }
 
     .place a img:hover {
-      transform: scale(1.02);
+      transform: scale(1.1);
     }
 
     /* Footer */
@@ -429,23 +439,29 @@ select {
 
     /* Mã QR công ty */
     .floating-qr {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 140px;
-  padding: 10px;
-  z-index: 9999;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 140px;
+      padding: 10px;
+      z-index: 9999;
+    }
 
-}
+    .tintuc-body {
+      padding: 25px;
+    }
 
-.floating-qr .close-btn {
-  position: absolute;
-  top: 13px;
-  right: 38px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #444;
-}
+    .tintuc-title {
+      font-weight: 600;
+    }
+
+    .tintuc-more {
+      text-decoration: none;
+      color: #2196f3;
+      font-weight: 600;
+      cursor: pointer;
+
+    }
 
 @media (max-width: 1400px) {
   .toggle-icon {
@@ -542,4 +558,13 @@ select {
     .uudai {
     margin-top: 48rem;
   }
+}
+
+.floating-qr .close-btn {
+  position: absolute;
+  top: 13px;
+  right: 38px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #444;
 }
